@@ -1,58 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Nuno - Responsive Bootstrap Theme</title>
-	<link rel="shortcut icon" href="img/favicon.ico">
-	<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/lightbox.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.default.css">
-	<link rel="stylesheet" href="css/arrow.css">
-	<link rel="stylesheet" href="css/fixed.css">
-	<link rel="stylesheet" href="css/waypoints.css">
-</head>
-<body>
+{% extends 'restaurant/base.html.twig' %}
 
-<!--- Start Home section -->
-<div id="home" class="offset">
+{% block title %}@TODO
+{% endblock %}
 
-<!--- Navigation -->
-<nav class="navbar navbar-expand-md fixed-top always-solid">
-<div class="container-fluid">
-	<a class="navbar-brand" href="index.html"><img src="img/nuno.png" alt=""></a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-		<span class="custom-toggler-icon"><i class="fas fa-bars"></i></span>
-	</button>
+{% block body %}
 
-	<div class="collapse navbar-collapse" id="navbarResponsive">
-		<ul class="navbar-nav ml-auto">
-			<li class="nav-item">
-				<a class="nav-link" href="index.html">Home</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link active" href="portfolio.html">Portfolio</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="pricing.html">Pricing</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="team.html">Team</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="contact.html">Contact Us</a>
-			</li>
-		</ul>
-	</div>
-</div>
-</nav>
-<!--- End Navigation -->
-
-</div>
-<!--- End Home Section -->
+	{{ include('restaurant/layout/_nav_start.html.twig') }}
+	{{ include('restaurant/layout/_nav_end.html.twig') }}
 
 <div id="title-heading">
 <div class="row">
@@ -63,19 +17,17 @@
 </div>
 </div>
 
-<!--- Start Portfolio Section -->
+{# Start Portfolio Section #}
 <div id="portfolio" class="offset">
 
 <div class="row padding">
-<!---
-	<div class="col-12 os-animation" data-animation="fadeInUp">
-		<h3 class="heading">Portfolio</h3>
+	{# <div class="col-12 os-animation" data-animation="fadeInUp">
+		<h3 class="heading">blabla</h3>
 		<div class="heading-underline"></div>
-	</div>
--->
-</div> <!--- End Row -->
+	</div> #}
+</div> {# End Row #}
 
-<!--- Start Portfolio Grid -->
+{# Start Portfolio Grid #}
 <div class="container-fluid">
 <div class="row no-padding">
 	
@@ -159,9 +111,9 @@
 	</div>
 	</div>
 
-</div> <!--- End Row -->
-</div> <!--- End Container -->
-<!--- End Portfolio Grid -->
+</div> {# End Row #}
+</div> {# End Container #}
+{# End Portfolio Grid #}
 
 <div class="os-animation" data-animation="fadeInUp">
 <div class="narrow text-center">
@@ -173,9 +125,9 @@
 </div>
 
 </div>
-<!--- End of Portfolio Section -->
+{# End of Portfolio Section #}
 
-<!--- Start Contact Section -->
+{# Start Contact Section #}
 <div id="contact" class="offset">
 
 <footer>
@@ -208,31 +160,16 @@
 	<hr class="socket">
 	&copy; Nuno Theme.
 
-</div> <!--- End of Row -->
-</footer> <!--- End of Footer -->
+</div> {# End of Row #}
+</footer> {# End of Footer #}
 
 </div>
-<!--- End of Contact Section -->
+{# End of Contact Section #}
 
-<!--- Top Scroll -->
+{# Top Scroll #}
 <a href="#home" class="top-scroll">
 	<i class="fas fa-angle-up"></i>
 </a>
-<!--- End of Top Scroll -->
+{# End of Top Scroll #}
 
-<!--- Script Source Files -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-<script src="https://use.fontawesome.com/releases/v5.9.0/js/all.js"></script>
-<script src="js/custom.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/waypoints.js"></script>
-<script src="js/lightbox.js"></script>
-<script src="js/owl.carousel.js"></script>
-<script src="js/jquery.counterup.js"></script>
-<script src="js/validator.js"></script>
-<script src="js/contact.js"></script>
-<!--- End of Script Source Files -->
-
-</body>
-</html>
+{% endblock %}

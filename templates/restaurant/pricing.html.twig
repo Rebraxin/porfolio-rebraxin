@@ -1,58 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Nuno - Responsive Bootstrap Theme</title>
-	<link rel="shortcut icon" href="img/favicon.ico">
-	<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/lightbox.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.default.css">
-	<link rel="stylesheet" href="css/arrow.css">
-	<link rel="stylesheet" href="css/fixed.css">
-	<link rel="stylesheet" href="css/waypoints.css">
-</head>
-<body>
+{% extends 'restaurant/base.html.twig' %}
 
-<!--- Start Home section -->
-<div id="home" class="offset">
+{% block title %}@TODO
+{% endblock %}
 
-<!--- Navigation -->
-<nav class="navbar navbar-expand-md fixed-top always-solid">
-<div class="container-fluid">
-	<a class="navbar-brand" href="index.html"><img src="img/nuno.png" alt=""></a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-		<span class="custom-toggler-icon"><i class="fas fa-bars"></i></span>
-	</button>
-
-	<div class="collapse navbar-collapse" id="navbarResponsive">
-		<ul class="navbar-nav ml-auto">
-			<li class="nav-item">
-				<a class="nav-link" href="index.html">Home</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="portfolio.html">Portfolio</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link active" href="pricing.html">Pricing</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="team.html">Team</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="contact.html">Contact Us</a>
-			</li>
-		</ul>
-	</div>
-</div>
-</nav>
-<!--- End Navigation -->
-
-</div>
-<!--- End Home Section -->
+{% block body %}
+	{{ include('restaurant/layout/_nav_start.html.twig') }}
+	{{ include('restaurant/layout/_nav_end.html.twig') }}
 
 <div id="title-heading">
 <div class="row">
@@ -191,19 +144,4 @@
 </a>
 <!--- End of Top Scroll -->
 
-<!--- Script Source Files -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-<script src="https://use.fontawesome.com/releases/v5.9.0/js/all.js"></script>
-<script src="js/custom.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/waypoints.js"></script>
-<script src="js/lightbox.js"></script>
-<script src="js/owl.carousel.js"></script>
-<script src="js/jquery.counterup.js"></script>
-<script src="js/validator.js"></script>
-<script src="js/contact.js"></script>
-<!--- End of Script Source Files -->
-
-</body>
-</html>
+{% endblock %}

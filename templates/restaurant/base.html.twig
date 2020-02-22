@@ -22,7 +22,43 @@
     </head>
 
     <body>
-        {% block body %}{% endblock %}
+
+    {% block body %}
+
+
+        {# Start Home section #}
+        <div id="home">
+            {# Navigation #}
+            <nav class="navbar navbar-expand-md fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="{{ path('index_restau') }}"><img src="{{ asset('restaurant/img/nuno.png') }}" alt=""/></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"><span ="custom-toggler-icon"><i class="fas fa-bars"></i></span></button>
+
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{{ path('index_restau') }}l">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('portfolio_restau') }}">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('pricing_restau') }}">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('team_restau') }}">Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('contact_restau') }}">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            {# End Navigation #}
+        
+        
+        {% endblock %}
         {% block javascripts %}{% endblock %}
         {# Start of Script Source Files #}
         <script src="{{ asset('restaurant/js/jquery-3.3.1.min.js') }}"></script>
