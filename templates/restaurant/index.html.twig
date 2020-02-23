@@ -5,9 +5,9 @@
 
 {% block body %}
 
-	{{ include('restaurant/layout/_nav_start.html.twig') }}
-	{{ include('restaurant/layout/_land_page.html.twig') }}
-	{{ include('restaurant/layout/_nav_end.html.twig') }}
+	{% include "restaurant/layout/_nav_start.html.twig" %}
+	{% include "restaurant/layout/_land_page.html.twig" %}
+	{% include "restaurant/layout/_nav_end.html.twig" %}
 
 	{# Start Features Section #}
 	<div id="features" class="offset">
@@ -21,7 +21,7 @@
 						              based designs. This website is built with HTML5, CSS3 and
 						              Bootstrap 4.
 					</p>
-					<a class="btn btn-secondary btn-sm" href="{{ path('pricing_restau') }}">Request A Quote</a>
+					<a class="btn btn-secondary btn-sm" href="{{ path('pricing_restau" %}">Request A Quote</a>
 					<a class="btn btn-turquoise btn-sm" href="{{ path('portfolio_restau') }}">See Our Portfolio</a>
 				</div>
 			</div>
