@@ -2,8 +2,9 @@
 
 namespace App\Controller\MainController;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Language;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class HomeController extends AbstractController
 {
@@ -12,8 +13,10 @@ class HomeController extends AbstractController
      */
     public function homepage()
     {
+        $languages = $this->getDoctrine()->getRepository(Language::class)->findAll();
+
         return $this->render('main/homepage.html.twig', [
-            'controller_name' => 'HomeController',
+            'languages' => $languages,
         ]);
     }
 }

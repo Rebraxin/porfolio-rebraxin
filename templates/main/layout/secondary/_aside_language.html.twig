@@ -4,11 +4,16 @@
         <div class="content">
             <ul class="list-unstyled">
                 
-                {# @TODO List Of language Complet #}
-                <li class="item">
-                    <span class="title"><strong>English:</strong></span>
-                    <span class="level">Native Speaker <br class="visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </span>
-                </li>
+                {% for language in languages %}
+                    <li class="item">
+                        <span class="title"><strong>{{ language.language }} :</strong></span>
+                        <span class="level">{{ language.level }} <br class="visible-xs"/>
+                            {% for i in 1..language.star %}
+                                <i class="fas fa-star"></i>
+                            {% endfor %}
+                        </span>
+                    </li>
+                {% endfor %}
                 
             </ul>
         </div>
